@@ -1,16 +1,78 @@
-# chatbot_flutter_app
 
-A new Flutter project.
+# Your Project Name
 
-## Getting Started
+A brief description of what your project does and its purpose.
 
-This project is a starting point for a Flutter application.
+## Table of Contents
 
-A few resources to get you started if this is your first Flutter project:
+- [Installation](#installation)
+- [Usage](#usage)
+- [File Structure](#file-structure)
+- [Configuration](#configuration)
+- [Contributing](#contributing)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Installation
+
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/Dev7HD/Flutter_Chat_GPT_App
+   ```
+2. Navigate to the project directory:
+   ```sh
+   cd Flutter_Chat_GPT_App
+   ```
+3. Add your OpenAi token:
+   *Create an `.env` file:*
+   ```sh
+   touch .env
+   ```
+   *Edit the file:*
+   `OPENAI_API_KEY='YOUR_OPENAI_TOKEN'`
+
+4. Install dependencies:
+   ```sh
+   flutter pub get
+   ```
+
+## Usage
+
+1. Run the project:
+   ```sh
+   flutter run
+   ```
+
+## File Structure
+
+- `main.dart`: The entry point of the application. It initializes the app and sets the `HomePage` as the default route.
+- `home_page.dart`: Contains the `HomePage` widget which serves as the main screen of the application.
+- `chat_screen.dart`: Contains the `ChatScreen` widget which manages the chat interface.
+- `config.dart`: Configuration file for the OpenAI token.
+
+### main.dart
+
+The `main.dart` file is the entry point of the Flutter application. It initializes the app and sets the `HomePage` as the default route.
+
+### home_page.dart
+
+The `home_page.dart` file defines the `HomePage` widget. This widget is the main screen that users see when they open the app. It contains a button that navigates to the `ChatScreen`.
+
+### chat_screen.dart
+
+The `chat_screen.dart` file defines the `ChatScreen` widget. This widget handles the chat interface, displaying a simple message.
+
+### config.dart
+
+The `config.dart` file contains configuration settings that are used throughout the application. It defines constants for the app name and screen titles.
+
+## Configuration
+
+You can update the configuration settings in the `config.dart` file to load `.env` file and get the token.
+
+## Contributing
+
+1. Fork the repository.
+2. Create your feature branch (`git checkout -b feature/YourFeature`).
+3. Commit your changes (`git commit -m 'Add some feature'`).
+4. Push to the branch (`git push origin feature/YourFeature`).
+5. Open a pull request.
