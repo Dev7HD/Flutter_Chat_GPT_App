@@ -1,7 +1,5 @@
 
-# Your Project Name
-
-A brief description of what your project does and its purpose.
+# Flutter Chat Bot ChatGPT App
 
 ## Table of Contents
 
