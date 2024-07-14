@@ -26,15 +26,16 @@ class _ChatScreenState extends State<ChatScreen> {
       );
     });
 
-    final request = CompleteText(
-      prompt: message.text,
-      model: Gpt3TurboInstruct(),
-      maxTokens: 150,
-    );
+    final request = ChatCompleteText(
+        messages: [
+          Map.of({"role": "user", "content": message.text})
+    ],
+        maxToken: 500,
+        model: Gpt4O2024ChatModel());
 
     try {
-      final response = await openAI.onCompletion(request: request);
-      final botResponse = response?.choices.first.text.trim();
+      final response = await openAI.onChatCompletion(request: request);
+      final botResponse = response?.choices.first.message?.content;
 
       if (botResponse != null) {
         setState(() {
